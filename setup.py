@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name = 'ijson',
@@ -7,6 +7,9 @@ setup(
     author = 'Ivan Sagalaev',
     author_email = 'maniac@softwaremaniacs.org',
     packages = ['ijson', 'ijson.backends'],
+    platforms = ('Any'),
+    install_requires = ['setuptools'],
+    zip_safe = False,
     url = 'https://github.com/isagalaev/ijson',
     license = 'LICENSE.txt',
     description = 'Iterative JSON parser with a standard Python iterator interface',
