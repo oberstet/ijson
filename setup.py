@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name = 'ijson',
-    version = '1.1',
+    version = '1.2',
     author = 'Ivan Sagalaev',
     author_email = 'maniac@softwaremaniacs.org',
     packages = ['ijson', 'ijson.backends'],
