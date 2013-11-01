@@ -65,6 +65,10 @@ backends located in ijson/backends:
 - ``yajl``: wrapper around `YAJL <http://lloyd.github.com/yajl/>`_ version 1.x
 - ``python``: pure Python parser (good to use under PyPy)
 
+To use the YAJL backend, here is how to install on Debian/Ubuntu:
+
+    sudo apt-get install yajl-tools
+
 You can import a specific backend and use it in the same way as the top level
 library::
 
@@ -72,6 +76,10 @@ library::
 
     for item in ijson.items(...):
         # ...
+
+For PyPy make sure you import the ``python`` backend (its faster than YAJL):
+
+    import ijson.backends.python as ijson
 
 Importing the top level library as ``import ijson`` tries to import all backends
 in order, so it either finds an appropriate version of YAJL or falls back to the
